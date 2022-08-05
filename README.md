@@ -1,4 +1,4 @@
-# DEVIXEL BACKEND TEST
+# BTS BACKEND TEST
 
 ## Tech Specification
  
