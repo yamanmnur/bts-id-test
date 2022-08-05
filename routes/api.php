@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::group([
-  'middleware' => 'api',
   'prefix' => 'users'
 ], function($router) {
   Route::post('/signup', [AuthController::class, 'signup']);
