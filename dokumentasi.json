@@ -1,26 +1,31 @@
 {
 	"info": {
-		"_postman_id": "e2a8965d-3e2e-439e-8202-88d57af9d1a3",
-		"name": "API_OLSERA",
+		"_postman_id": "00c35160-0b18-49f5-9a6e-d34ab560c584",
+		"name": "BTS_ID_TEST",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "REF_PAJAK",
+			"name": "SHOPPING",
 			"item": [
 				{
 					"name": "GET ALL",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{url}}/api/pajak?page=1&per_page=10",
+							"raw": "{{url}}/shopping?page=1&per_page=10",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
-								"pajak"
+								"shopping"
 							],
 							"query": [
 								{
@@ -120,11 +125,16 @@
 								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nama\" : \"Pajak Makanan\",\n    \"rate\" : 2\n}",
+							"raw": "{\n    \"shopping\" : {\n        \"name\" : \"Baju Sekolah\",\n        \"createddate\" : \"2022-02-02\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -132,13 +142,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/pajak",
+							"raw": "{{url}}/shopping",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
-								"pajak"
+								"shopping"
 							]
 						}
 					},
@@ -147,519 +156,21 @@
 							"name": "CREATE",
 							"originalRequest": {
 								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"nama\" : \"Pajak Makanan\",\n    \"rate\" : 2\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/pajak",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pajak"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 07:35:36 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 07:35:36 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 3,\n        \"nama\": \"Pajak Makanan\",\n        \"rate\": 2,\n        \"created_at\": \"2022-08-02T07:35:36.000000Z\",\n        \"updated_at\": \"2022-08-02T07:35:36.000000Z\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "UPDATE",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"nama\" : \"PAJAK PPH\",\n    \"rate\" : 3\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/api/pajak/1",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"pajak",
-								"1"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "UPDATE",
-							"originalRequest": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"nama\" : \"PAJAK PPH\",\n    \"rate\" : 3\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/pajak/1",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pajak",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 07:43:33 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 07:43:33 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "58"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"nama\": \"PAJAK PPH\",\n        \"rate\": 3,\n        \"created_at\": null,\n        \"updated_at\": \"2022-08-02T07:43:33.000000Z\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "DELETE",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{url}}/api/pajak/1",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"pajak",
-								"1"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "DELETE",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/api/pajak/1",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"pajak",
-										"1"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 07:44:16 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 07:44:16 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"nama\": \"PAJAK PPH\",\n        \"rate\": 3,\n        \"created_at\": null,\n        \"updated_at\": \"2022-08-02T07:44:16.000000Z\",\n        \"deleted_at\": \"2022-08-02T07:44:16.000000Z\"\n    }\n]"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "REF_ITEM",
-			"item": [
-				{
-					"name": "GET ALL",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{url}}/api/item",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"item"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "GET ALL",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{url}}/api/item",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"item"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 15:37:12 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 15:37:12 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"nama\": \"baju_batik\",\n        \"pajak\": [\n            {\n                \"id\": 1,\n                \"nama\": \"pph\",\n                \"rate\": \"5%\"\n            },\n            {\n                \"id\": 2,\n                \"nama\": \"pajak toko\",\n                \"rate\": \"10%\"\n            }\n        ]\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "CREATE",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"nama\" : \"Kemeja\",\n    \"pajak\" : [1,2]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/api/item",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"item"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "CREATE",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"nama\" : \"Kemeja\",\n    \"pajak\" : [1,2]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{url}}/api/item",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"api",
-										"item"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 15:51:38 GMT"
-								},
-								{
-									"key": "Date",
-									"value": "Tue, 02 Aug 2022 15:51:38 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/7.4.3"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 8,\n        \"nama\": \"Kemeja\",\n        \"pajak\": [\n            {\n                \"id\": 1,\n                \"nama\": \"pph\",\n                \"rate\": 5\n            },\n            {\n                \"id\": 2,\n                \"nama\": \"pajak toko\",\n                \"rate\": 10\n            }\n        ],\n        \"created_at\": \"2022-08-02T15:51:38.000000Z\",\n        \"updated_at\": \"2022-08-02T15:51:38.000000Z\"\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "UPDATE",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"nama\" : \"Seragam Sekolah\",\n    \"pajak\" : [1,2,3]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{url}}/api/item/2",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"api",
-								"item",
-								"2"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "UPDATE",
-							"originalRequest": {
-								"method": "PUT",
 								"header": [
 									{
 										"key": "Accept",
 										"value": "application/json",
 										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"nama\" : \"Seragam Sekolah\",\n    \"pajak\" : [1,2,3]\n}",
+									"raw": "{\n    \"shopping\" : {\n        \"name\" : \"Baju Sekolah\",\n        \"createddate\" : \"2022-02-02\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -667,14 +178,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{url}}/api/item/2",
+									"raw": "{{url}}/shopping",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"api",
-										"item",
-										"2"
+										"shopping"
 									]
 								}
 							},
@@ -688,11 +197,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 02 Aug 2022 16:08:37 GMT"
+									"value": "Fri, 05 Aug 2022 03:40:31 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 02 Aug 2022 16:08:37 GMT"
+									"value": "Fri, 05 Aug 2022 03:40:31 GMT"
 								},
 								{
 									"key": "Connection",
@@ -724,54 +233,80 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 2,\n        \"nama\": \"Seragam Sekolah\",\n        \"pajak\": [\n            {\n                \"id\": 1,\n                \"nama\": \"pph\",\n                \"rate\": 5\n            },\n            {\n                \"id\": 2,\n                \"nama\": \"pajak toko\",\n                \"rate\": 10\n            },\n            {\n                \"id\": 3,\n                \"nama\": \"Pajak Makanan\",\n                \"rate\": 2\n            }\n        ],\n        \"created_at\": \"2022-08-02T16:04:51.000000Z\",\n        \"updated_at\": \"2022-08-02T16:08:29.000000Z\"\n    }\n]"
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Baju Sekolah\",\n        \"createdDate\": \"2022-02-02T00:00:00.000000Z\"\n    }\n}"
 						}
 					]
 				},
 				{
-					"name": "DELETE",
+					"name": "UPDATE",
 					"request": {
-						"method": "DELETE",
+						"method": "PUT",
 						"header": [
 							{
 								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shopping\" : {\n        \"name\" : \"Pencil\",\n        \"createddate\" : \"2022-02-03\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{url}}/api/item/2",
+							"raw": "{{url}}/shopping/1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"api",
-								"item",
-								"2"
+								"shopping",
+								"1"
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "New Request",
+							"name": "UPDATE",
 							"originalRequest": {
-								"method": "DELETE",
+								"method": "PUT",
 								"header": [
 									{
 										"key": "Accept",
 										"value": "application/json",
 										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"shopping\" : {\n        \"name\" : \"Pencil\",\n        \"createddate\" : \"2022-02-03\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{url}}/api/item/2",
+									"raw": "{{url}}/shopping/1",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"api",
-										"item",
-										"2"
+										"shopping",
+										"1"
 									]
 								}
 							},
@@ -785,11 +320,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 02 Aug 2022 16:09:16 GMT"
+									"value": "Fri, 05 Aug 2022 03:41:48 GMT"
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 02 Aug 2022 16:09:16 GMT"
+									"value": "Fri, 05 Aug 2022 03:41:48 GMT"
 								},
 								{
 									"key": "Connection",
@@ -813,7 +348,7 @@
 								},
 								{
 									"key": "X-RateLimit-Remaining",
-									"value": "56"
+									"value": "58"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -821,9 +356,465 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 2,\n        \"nama\": \"Seragam Sekolah\",\n        \"created_at\": \"2022-08-02T16:04:51.000000Z\",\n        \"updated_at\": \"2022-08-02T16:09:16.000000Z\",\n        \"deleted_at\": \"2022-08-02T16:09:16.000000Z\"\n    }\n]"
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Pencil\",\n        \"createdDate\": \"2022-02-03T00:00:00.000000Z\"\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/shopping/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shopping",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/shopping/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"shopping",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Aug 2022 03:34:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Aug 2022 03:34:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Handphone\",\n        \"created_at\": \"2022-02-03T00:00:00.000000Z\",\n        \"updated_at\": \"2022-08-05T03:34:50.000000Z\",\n        \"deleted_at\": \"2022-08-05T03:34:50.000000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjcwMDc3LCJleHAiOjE2NTk2NzM2NzcsIm5iZiI6MTY1OTY3MDA3NywianRpIjoiSk9CUnA1SEIzaWNQb0xCcyIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xPqoooRxiQ3fzE-xT4eRWOnJa_5QtF18kK8Wa8Rbxck",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/shopping/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"shopping",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SIGN IN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"yaman@gmail.com\",\n    \"password\" : \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/signin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "REGISTER",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"yaman\",\n    \"password\" : \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 16:30:47 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"yaman\"\n}"
+				}
+			]
+		},
+		{
+			"name": "SIGN UP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\" : {\n        \"username\" : \"yamanmnur\",\n        \"email\" : \"yaman@gmail.com\",\n        \"encrypted_password\" : \"password\",\n        \"phone\" : \"0898123124121\",\n        \"city\" : \"Bandung\",\n        \"country\" : \"Indonesia\",\n        \"name\" : \"Yaman M Nur\",\n        \"address\" : \"JL HJ Ratnamah\",\n        \"postcode\" : \"40287\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "LOGIN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\" : {\n        \"username\" : \"yamanmnur\",\n        \"email\" : \"yaman@gmail.com\",\n        \"encrypted_password\" : \"password\",\n        \"phone\" : \"0898123124121\",\n        \"city\" : \"Bandung\",\n        \"country\" : \"Indonesia\",\n        \"name\" : \"Yaman M Nur\",\n        \"address\" : \"JL HJ Ratnamah\",\n        \"postcode\" : \"40287\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Aug 2022 03:20:28 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Aug 2022 03:20:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"yaman@gmail.com\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbnVwIiwiaWF0IjoxNjU5NjY5NjI4LCJleHAiOjE2NTk2NzMyMjgsIm5iZiI6MTY1OTY2OTYyOCwianRpIjoiOHN1T0xEMWdCUGc4NktGeCIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.dhdS0O2ak_nSarrE-AN6vPqu5utuEkUs-Cjfh5lnAGY\",\n    \"username\": \"yamanmnur\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET ALL USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjY5ODA5LCJleHAiOjE2NTk2NzM0MDksIm5iZiI6MTY1OTY2OTgwOSwianRpIjoiM1FVdm1aUjBWQ0laNkMwWiIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.bHFI5lvDhtWyPlLzuo2E7zxywcH5RoYZCnce7KoiuEY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/users/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET ALL USERS",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC91c2Vyc1wvc2lnbmluIiwiaWF0IjoxNjU5NjY5ODA5LCJleHAiOjE2NTk2NzM0MDksIm5iZiI6MTY1OTY2OTgwOSwianRpIjoiM1FVdm1aUjBWQ0laNkMwWiIsInN1YiI6MiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.bHFI5lvDhtWyPlLzuo2E7zxywcH5RoYZCnce7KoiuEY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Aug 2022 03:24:59 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Aug 2022 03:24:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.3"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"Yaman M Nur\",\n        \"username\": \"yamanmnur\",\n        \"email\": \"yaman@gmail.com\",\n        \"phone\": \"0898123124121\",\n        \"country\": \"Indonesia\",\n        \"city\": \"Bandung\",\n        \"createdDate\": \"2022-08-05T03:20:28.000000Z\"\n    }\n]"
 				}
 			]
 		}
